@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4J35NNWX2Z"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-4J35NNWX2Z');
+    </script>
+    
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Raid Boss Spawn Countdown</title>
+    <script src="block.js"></script>
+</head>
+<body>
+    <div class="form-inline">
+        <label for="maxLvlInput">Maximum lvl</label><br>
+        <input type="number" id="maxLvl" name="maxLvlInput" min="20" max="80" value="80"><br>
+        
+        <label for="minLvlInput">Minimum lvl</label><br>
+        <input type="number" id="minLvl" name="minLvlInput" min="20" max="80" value="72">
+        
+        <label for="maxSpawnTimeInput">Maximum spawn time (hour)</label><br>
+        <input type="number" id="maxSpawnTime" name="maxSpawnTimeInput" min="1" max="24" value="2">
+        
+        <button onclick="startTable()">REFRESH</button>
+        <div class="refreshTimer">
+            <div class="refreshTimer-label">Auto-Refresh:</div>
+            <div id="tableRefreshCountdownIndicator" class="refreshTimer-timestamp">05:00</div>
+        </div>
+    </div>
+<table>
+</table>
+<p id="p1">This site shows countdown of spawn time on <a href="https://seasons.l2reborn.org/raidbosses-map/">l2reborn server 30x</a>. It saves 1 cookie which stores table view setting.</p>
+<p id="p2">Maximum spawn time setting filters by the maximum number of hours until RB spawns.</p>
+</body>
+<script src="RB_DATA.js"></script>
+<script src="script.js?v=<?php echo time(); ?>"></script>
+</html>
